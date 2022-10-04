@@ -1,8 +1,9 @@
 import "./App.css";
-import InputForm from "./components/inputs/inputForm";
+
+import Login from "./components/Login/Login";
 
 function App() {
-  return <InputForm />;
+  return <Login />;
 }
 
 export default App;
