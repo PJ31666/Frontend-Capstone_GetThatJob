@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import "./App.css";
 import Login from "./components/Login/Login";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
 
 const WrapperLogin = styled.div`
   display: flex;
@@ -13,9 +15,11 @@ const WrapperLogin = styled.div`
 
 function App() {
   return (
-    <WrapperLogin>
-      <Login />
-    </WrapperLogin>
+    <>
+      <Routes>
+        <Route index element={<Home />} />
+      </Routes>
+    </>
   );
 }
 
