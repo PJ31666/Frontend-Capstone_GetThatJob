@@ -1,10 +1,17 @@
 import "./App.css";
+//import CardForm from "./components/inputs/cardForm";
 //import InputForm from "./components/inputs/inputForm";
-//import NavBarForm from "./components/inputs/navBar";
-import SideNavBarForm from "./components/inputs/sideNavBar";
+import NavBarForm from "./components/inputs/navBar";
+import HomePage from "./components/pages/HomePage";
+//import SideNavBarForm from "./components/inputs/sideNavBar";
 
 function App() {
-  return <SideNavBarForm />;
+  return (
+    <>
+      <NavBarForm />
+      <HomePage />
+    </>
+  );
 }
 
 export default App;

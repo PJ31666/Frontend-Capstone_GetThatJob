@@ -4,11 +4,12 @@ import styled from "@emotion/styled";
 export const StyledCreateAccountButton = styled.button`
   height: 56px;
   width: 264px;
-  left: 582px;
-  top: 331px;
+  font-size: 14px;
+  font-weight: 500;
   border-radius: 16px;
-  padding: 16px 24px 16px 24px;
   background-color: ${colors.pink};
+  color: ${colors.white};
+  border: none;
 `;
 
 export const StyledLogInButton = styled.button`
@@ -101,6 +102,7 @@ export const StyledSeeMoreButton = styled.button`
   border-color: ${colors.pink};
   display: flex;
   align-items: center;
+  background-color: ${colors.white};
 `;
 
 export const StyledFollowButton = styled.button`
@@ -108,6 +110,11 @@ export const StyledFollowButton = styled.button`
   display: flex;
   align-items: center;
   gap: 4px;
+  font-size: 14px;
+  color: ${colors.gray};
+  background-color: ${colors.white};
+  gap: 13px;
+  padding: 16px;
 `;
 
 export const StyledApplyNowButton = styled.button`
@@ -138,6 +145,7 @@ export const StyledShowButton = styled.button`
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 16px;
   background-color: ${colors.white};
 `;
 export const StyledMarkStartedButton = styled.button`
@@ -198,11 +206,11 @@ export const StyledSaveButton = styled.button`
   background-color: ${colors.pink};
 `;
 
-export const StyledShowButton = styled.button`
-  height: 56px;
-  width: 233px;
-  border-radius: 16px;
-  padding: 16px 24px 16px 24px;
-  align-items: center;
-  background-color: ${colors.pink};
-`;
+// export const StyledShowButton = styled.button`
+//   height: 56px;
+//   width: 233px;
+//   border-radius: 16px;
+//   padding: 16px 24px 16px 24px;
+//   align-items: center;
+//   background-color: ${colors.pink};
+// `;

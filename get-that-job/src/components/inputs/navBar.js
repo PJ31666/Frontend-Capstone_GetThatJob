@@ -3,10 +3,11 @@ import styled from "@emotion/styled";
 import sign from "../pic/sign.svg";
 import log from "../pic/log.svg";
 
-const StyledNavBar = styled.div`
+export const StyledNavBar = styled.div`
   display: flex;
-  height: 40px;
+  height: 64px;
   width: 100%;
+  justify-content: space-between;
   background-color: ${colors.white};
   padding: 12px 120px;
   offset: 0px, 2px rgba(0, 0, 0, 0.2);
@@ -18,15 +19,14 @@ export const StyledLogo = styled.div`
   padding-left: 32px;
 `;
 
-const StyledMenu = styled.div`
+export const StyledMenu = styled.div`
   display: flex;
-  padding: 12px 152px 12px 743px;
+  padding: 12px;
   gap: 10px;
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   display: flex;
-  height: 40px;
   width: 129px;
   border-radius: 16px;
   padding: 8px 16px 8px 16px;
