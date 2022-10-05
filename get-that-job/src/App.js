@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import "./App.css";
-import Login from "./components/Login/Login";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
