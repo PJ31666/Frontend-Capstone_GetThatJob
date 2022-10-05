@@ -29,6 +29,9 @@ const StyledInput = styled.input`
   &:nth-of-type(1) {
     margin-bottom: 1.5rem;
   }
+  &:nth-of-type(2) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 function InputsForm() {
