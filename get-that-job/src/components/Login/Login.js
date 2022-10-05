@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
-
 import colors from "../../styles/colors";
 import LoginContainer from "../../styles/LoginContainer";
 import InputsForm from "../Inputs/InputsForm";
-import MenPhoto from "../MenPhoto/MenPhoto";
+import MenPhoto from "../Images/MenPhoto";
 
 const LoginFormContainer = styled.div`
   display: flex;
