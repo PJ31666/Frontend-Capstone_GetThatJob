@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
 import InputSignup1 from "../Inputs/InputSignup1";
-import women from "../Images/women.svg";
+import women from "../Img/women.svg";
 import { StyledNextButton } from "../Buttons/Buttons";
 
 const WrapperSingUp = styled.div`
@@ -158,7 +158,7 @@ function Signup1() {
 
           <InputSignup1 />
           <ContainerButton>
-            <StyledNextButton>Next > </StyledNextButton>
+            <StyledNextButton>Next</StyledNextButton>
           </ContainerButton>
         </SignupFormContainer>
         <ContainerPhoto>
