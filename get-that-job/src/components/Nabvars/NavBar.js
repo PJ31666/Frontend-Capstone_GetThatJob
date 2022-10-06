@@ -1,9 +1,9 @@
 import colors from "../../styles/colors";
 import styled from "@emotion/styled";
-import Signup from "../Images/Signup.svg";
-import login from "../Images/login.svg";
+import sign from "../pic/sign.svg";
+import log from "../pic/log.svg";
 
-const StyledNavBar = styled.div`
+export const StyledNavBar = styled.div`
   display: flex;
   height: 64px;
   width: 100%;
@@ -19,13 +19,13 @@ export const StyledLogo = styled.div`
   padding-left: 32px;
 `;
 
-const StyledMenu = styled.div`
+export const StyledMenu = styled.div`
   display: flex;
   padding: 12px;
   gap: 10px;
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   display: flex;
   width: 129px;
   border-radius: 16px;
@@ -35,19 +35,20 @@ const StyledButton = styled.button`
   border-color: ${colors.pink};
   background-color: ${colors.white};
 `;
-function NavBar() {
+
+function NavBarForm() {
   return (
     <StyledNavBar>
       <StyledLogo>
-        <img src={require("../Images/logo.png")} />
+        <img src={require("../Img/logo.png")} />
       </StyledLogo>
       <StyledMenu>
         <StyledButton>
-          <img src={Signup} alt="" />
-          SIGN UP
+          <img src={sign} alt="Sign Logo" />
+          SIGN IN
         </StyledButton>
         <StyledButton>
-          <img src={login} alt="" />
+          <img src={log} alt="Sign Logo" />
           LOGIN
         </StyledButton>
       </StyledMenu>
@@ -55,4 +56,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBarForm;

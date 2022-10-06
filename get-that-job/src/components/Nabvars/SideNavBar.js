@@ -1,6 +1,6 @@
 import colors from "../../styles/colors";
 import styled from "@emotion/styled";
-import { StyledLogo } from "./navBar";
+import { StyledLogo } from "./NavBar";
 import find from "../pic/find.svg";
 import application from "../pic/application.svg";
 import following from "../pic/following.svg";
@@ -92,7 +92,7 @@ function SideNavBarForm() {
   return (
     <StyledSideNavBar>
       <StyledLogo>
-        <img src={require("../img/logo.png")} />
+        <img src={require("../Img/logo.png")} />
       </StyledLogo>
       <StyledSideNavBarMenu>
         <StyledSideNavBarList>
