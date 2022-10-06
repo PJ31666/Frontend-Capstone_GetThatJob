@@ -44,7 +44,7 @@ function NavBar() {
       <StyledMenu>
         <StyledButton>
           <img src={Signup} alt="" />
-          SIGN IN
+          SIGN UP
         </StyledButton>
         <StyledButton>
           <img src={login} alt="" />

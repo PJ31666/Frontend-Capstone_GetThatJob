@@ -3,6 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
+import Signup1 from "./components/SignupProf/Signup1";
 
 const WrapperLogin = styled.div`
   display: flex;
@@ -19,9 +20,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/signup1" element={<Signup1 />} />
       </Routes>
     </>
   );
 }
-
 export default App;
