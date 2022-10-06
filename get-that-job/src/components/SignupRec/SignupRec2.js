@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
-import InputSignup1 from "../Inputs/InputSignup1";
-import women from "../Images/women.svg";
-import { StyledNextButton } from "../Buttons/Buttons";
+import InputSignupRec2 from "../Inputs/InputSignupRec2";
+import women from "../Img/women.svg";
 
 const WrapperSingUp = styled.div`
   display: flex;
@@ -56,6 +55,7 @@ const SignupFormContainer = styled.div`
 
 const ContainerSteps = styled.div`
   display: flex;
+  flex-direction: row;
   width: 470px;
   height: 60px;
   margin-bottom: 2rem;
@@ -66,9 +66,19 @@ const DivContainer = styled.div`
   margin-top: 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
   & div {
     & p {
+      background-color: ${colors.gray};
+      width: 32px;
+      height: 32px;
+      border-radius: 66.6667px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    & p:active {
       background-color: ${colors.pink};
       width: 32px;
       height: 32px;
@@ -86,12 +96,13 @@ const DivContainer = styled.div`
     }
   }
 `;
-
+/*
 const ContainerButton = styled.div`
   display: flex;
   align-self: center;
   margin-top: 2rem;
-`;
+`; 
+*/
 
 const ContainerPhoto = styled.div`
   display: flex;
@@ -108,7 +119,7 @@ const ContainerPhoto = styled.div`
   }
 `;
 
-function Signup1() {
+function SignupRec2() {
   return (
     <WrapperSingUp>
       <SignupContainer>
@@ -143,23 +154,10 @@ function Signup1() {
                   information
                 </span>
               </div>
-              <div>
-                <p>3</p>
-                <span>
-                  PENDING!
-                  <br />
-                  Professional
-                  <br />
-                  information
-                </span>
-              </div>
             </DivContainer>
           </ContainerSteps>
 
-          <InputSignup1 />
-          <ContainerButton>
-            <StyledNextButton>Next > </StyledNextButton>
-          </ContainerButton>
+          <InputSignupRec2 />
         </SignupFormContainer>
         <ContainerPhoto>
           <div>
@@ -171,4 +169,4 @@ function Signup1() {
   );
 }
 
-export default Signup1;
+export default SignupRec2;

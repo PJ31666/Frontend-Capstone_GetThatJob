@@ -46,6 +46,21 @@ export const StyledNextButton = styled.button`
   border: none;
   cursor: pointer;
 `;
+export const StyledFinishButton = styled.button`
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 116px;
+  border-radius: 16px;
+  padding: 8px 16px 8px 16px;
+  background-color: ${colors.pink};
+  font-size: 12px;
+  color: ${colors.white};
+  align-items: center;
+  letter-spacing: 1.25px;
+  gap: 16px;
+  border: none;
+`;
 
 export const StyledSkipButton = styled.button`
   height: 40px;
@@ -56,6 +71,10 @@ export const StyledSkipButton = styled.button`
   padding: 8px 16px 8px 16px;
   background-color: ${colors.background};
   border-color: ${colors.pink};
+  color: ${colors.gray};
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.25px;
 `;
 
 export const StyledChooseFileButton = styled.button`
@@ -66,6 +85,11 @@ export const StyledChooseFileButton = styled.button`
   padding: 8px;
   background-color: ${colors.pink};
   gap: 8px;
+  font-size: 14px;
+  align-items: center;
+  gap: 10px;
+  color: ${colors.white};
+  font-family: "Inter";
 `;
 
 export const StyledPreviousButton = styled.button`
