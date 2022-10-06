@@ -108,7 +108,7 @@ const ContainerPhoto = styled.div`
   }
 `;
 
-function Signup1() {
+function Signup2() {
   return (
     <WrapperSingUp>
       <SignupContainer>
@@ -171,4 +171,4 @@ function Signup1() {
   );
 }
 
-export default Signup1;
+export default Signup2;
