@@ -36,6 +36,13 @@ export const StyledNextButton = styled.button`
   padding: 8px 16px 8px 16px;
   background-color: ${colors.pink};
   gap: 8px;
+  font-size: 14px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-weight: 500;
+  color: ${colors.white};
+  border: none;
 `;
 
 export const StyledSkipButton = styled.button`

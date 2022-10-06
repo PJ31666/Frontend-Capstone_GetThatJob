@@ -3,26 +3,25 @@ import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
 import InputSignup1 from "../Inputs/InputSignup1";
 import women from "../Images/women.svg";
-import { StyledLogInButton } from "../Buttons/Buttons";
+import { StyledLogInButton, StyledNextButton } from "../Buttons/Buttons";
 
 const WrapperSingUp = styled.div`
   display: flex;
   justify-content: center;
   gap: 86px;
-  margin-top: 132px;
-  margin-left: 318px;
-  margin-right: 120px;
+  margin-top: 40px;
+  margin-right: 480px;
 `;
 
 const SignupFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: flex-start;
   justify-items: center;
   width: 100%;
   height: 359px;
   width: 359px;
-  /* margin: 196px 763px 345px 318px; */
+
   & div {
     display: flex;
     flex-direction: column;
@@ -55,17 +54,58 @@ const SignupFormContainer = styled.div`
   }
 `;
 
+const ContainerSteps = styled.div`
+  display: flex;
+  width: 470px;
+  height: 60px;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+`;
+
+const DivContainer = styled.div`
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & div {
+    & p {
+      background-color: ${colors.pink};
+      width: 32px;
+      height: 32px;
+      border-radius: 66.6667px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+    }
+    & span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+  }
+`;
+
 const ContainerButton = styled.div`
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-self: flex-end;
+  align-self: center;
+  margin-top: 2rem;
 `;
 
 const ContainerPhoto = styled.div`
   display: flex;
   height: 567px;
   width: 560px;
+  position: relative;
+  left: 300px;
+  top: 290px;
+  & div {
+    & img {
+      position: absolute;
+      top: 50px;
+    }
+  }
 `;
 
 function Signup1() {
@@ -81,42 +121,44 @@ function Signup1() {
               <h3>RECRUITER</h3>
             </div>
           </div>
-          <div>
-            <div>
-              <p>1</p>
-              <span>
-                DONE!
-                <br />
-                Login
-                <br />
-                information
-              </span>
-            </div>
-            <div>
-              <p>2</p>
-              <span>
-                IN PROGRESS!
-                <br />
-                Login
-                <br />
-                information
-              </span>
-            </div>
-            <div>
-              <p>3</p>
-              <span>
-                PENDING!
-                <br />
-                Professional
-                <br />
-                information
-              </span>
-            </div>
-          </div>
+          <ContainerSteps>
+            <DivContainer>
+              <div>
+                <p>1</p>
+                <span>
+                  DONE!
+                  <br />
+                  Login
+                  <br />
+                  information
+                </span>
+              </div>
+              <div>
+                <p>2</p>
+                <span>
+                  IN PROGRESS!
+                  <br />
+                  Login
+                  <br />
+                  information
+                </span>
+              </div>
+              <div>
+                <p>3</p>
+                <span>
+                  PENDING!
+                  <br />
+                  Professional
+                  <br />
+                  information
+                </span>
+              </div>
+            </DivContainer>
+          </ContainerSteps>
 
           <InputSignup1 />
           <ContainerButton>
-            <StyledLogInButton>Login</StyledLogInButton>
+            <StyledNextButton>Next ></StyledNextButton>
           </ContainerButton>
         </SignupFormContainer>
         <ContainerPhoto>

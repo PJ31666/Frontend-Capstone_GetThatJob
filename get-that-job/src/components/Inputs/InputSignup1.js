@@ -41,6 +41,8 @@ function InputsForm() {
       <StyledInput id="email" placeholder="some.user@gmail.com" />
       <Label htmlFor="password">Password</Label>
       <StyledInput id="password" placeholder="******" />
+      <Label htmlFor="password">Password confirmation</Label>
+      <StyledInput id="password" placeholder="******" />
     </Form>
   );
 }
