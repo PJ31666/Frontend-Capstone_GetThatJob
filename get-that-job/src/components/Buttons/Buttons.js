@@ -24,6 +24,7 @@ export const StyledLogInButton = styled.button`
   font-weight: 500;
   color: ${colors.white};
   border: none;
+  cursor: pointer;
 `;
 
 export const StyledNextButton = styled.button`
@@ -43,6 +44,7 @@ export const StyledNextButton = styled.button`
   font-weight: 500;
   color: ${colors.white};
   border: none;
+  cursor: pointer;
 `;
 
 export const StyledSkipButton = styled.button`
