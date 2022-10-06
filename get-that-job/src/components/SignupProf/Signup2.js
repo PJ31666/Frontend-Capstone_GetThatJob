@@ -158,7 +158,7 @@ function Signup2() {
 
           <InputSignup1 />
           <ContainerButton>
-            <StyledNextButton>Next ></StyledNextButton>
+            <StyledNextButton>Next </StyledNextButton>
           </ContainerButton>
         </SignupFormContainer>
         <ContainerPhoto>
