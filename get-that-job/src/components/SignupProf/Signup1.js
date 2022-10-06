@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 import colors from "../../styles/colors";
-import LoginContainer from "../../styles/LoginContainer";
-import InputsForm from "../Inputs/InputsForm";
-import MenPhoto from "../Images/MenPhoto";
+import SignupContainer from "../../styles/SignupContainer";
+import InputSignup1 from "../Inputs/InputSignup1";
+import women from "../Images/women.svg";
 import { StyledLogInButton } from "../Buttons/Buttons";
 
-const WrapperLogin = styled.div`
+const WrapperSingUp = styled.div`
   display: flex;
   justify-content: center;
   gap: 86px;
@@ -14,7 +14,7 @@ const WrapperLogin = styled.div`
   margin-right: 120px;
 `;
 
-const LoginFormContainer = styled.div`
+const SignupFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,29 +62,71 @@ const ContainerButton = styled.div`
   align-self: flex-end;
 `;
 
-function Login() {
+const ContainerPhoto = styled.div`
+  display: flex;
+  height: 567px;
+  width: 560px;
+`;
+
+function Signup1() {
   return (
-    <WrapperLogin>
-      <LoginContainer>
-        <LoginFormContainer>
+    <WrapperSingUp>
+      <SignupContainer>
+        <SignupFormContainer>
           <div>
-            <h1>Welcome Back</h1>
-            <p>Login to you account as...</p>
+            <h1>Good choice!</h1>
+            <p>Create a new account as...</p>
             <div>
               <h3>PROFESSIONAL</h3>
               <h3>RECRUITER</h3>
             </div>
           </div>
+          <div>
+            <div>
+              <p>1</p>
+              <span>
+                DONE!
+                <br />
+                Login
+                <br />
+                information
+              </span>
+            </div>
+            <div>
+              <p>2</p>
+              <span>
+                IN PROGRESS!
+                <br />
+                Login
+                <br />
+                information
+              </span>
+            </div>
+            <div>
+              <p>3</p>
+              <span>
+                PENDING!
+                <br />
+                Professional
+                <br />
+                information
+              </span>
+            </div>
+          </div>
 
-          <InputsForm />
+          <InputSignup1 />
           <ContainerButton>
             <StyledLogInButton>Login</StyledLogInButton>
           </ContainerButton>
-        </LoginFormContainer>
-        <MenPhoto />
-      </LoginContainer>
-    </WrapperLogin>
+        </SignupFormContainer>
+        <ContainerPhoto>
+          <div>
+            <img src={women} alt="" />
+          </div>
+        </ContainerPhoto>
+      </SignupContainer>
+    </WrapperSingUp>
   );
 }
 
-export default Login;
+export default Signup1;
