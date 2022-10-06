@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import LoginContainer from "../../styles/LoginContainer";
 import InputsForm from "../Inputs/InputsForm";
-import MenPhoto from "../Images/MenPhoto";
+import MenPhoto from "../Img/MenPhoto";
 import { StyledLogInButton } from "../Buttons/Buttons";
 
 const WrapperLogin = styled.div`
