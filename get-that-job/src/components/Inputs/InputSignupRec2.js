@@ -12,7 +12,7 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const Label = styled.label`
+export const Label = styled.label`
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;

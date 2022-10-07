@@ -40,7 +40,7 @@ function NavBarForm() {
   return (
     <StyledNavBar>
       <StyledLogo>
-        <img src={require("../Img/logo.png")} />
+        <img src={require("../Img/logo.png")} alt="ssas" />
       </StyledLogo>
       <StyledMenu>
         <StyledButton>

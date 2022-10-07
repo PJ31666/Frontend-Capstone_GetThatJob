@@ -9,6 +9,11 @@ export const StyledCreateAccountButton = styled.button`
   border-radius: 16px;
   padding: 16px 24px 16px 24px;
   background-color: ${colors.pink};
+  font-size: 15px;
+  font-weight: 500;
+  color: ${colors.white};
+  letter-spacing: 1.25px;
+  border: none;
 `;
 
 export const StyledLogInButton = styled.button`
@@ -135,10 +140,12 @@ export const StyledSeeMoreButton = styled.button`
   width: 112px;
   left: 146px;
   border-radius: 16px;
-  padding: 8px 16px 8px 16px;
+  padding: 8px 16px 8px 25px;
   border-color: ${colors.pink};
   display: flex;
+  text-align: center;
   align-items: center;
+  color: ${colors.gray};
 `;
 
 export const StyledFollowButton = styled.button`
@@ -146,6 +153,8 @@ export const StyledFollowButton = styled.button`
   display: flex;
   align-items: center;
   gap: 4px;
+  background-color: ${colors.white};
+  padding-top: 16px;
 `;
 
 export const StyledApplyNowButton = styled.button`
@@ -234,4 +243,13 @@ export const StyledSaveButton = styled.button`
   padding: 8px 16px 8px 16px;
   align-items: center;
   background-color: ${colors.pink};
+`;
+export const StyledAppliedButton = styled.button`
+  height: 40px;
+  width: 98px;
+  border-radius: 16px;
+  padding: 8px 16px 8px 16px;
+  border: none;
+  background-color: ${colors.backgroundDark};
+  color: ${colors.lightGray};
 `;

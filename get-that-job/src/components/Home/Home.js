@@ -7,12 +7,14 @@ import dik from "../Img/dik.svg";
 import fatima from "../Img/fatima.svg";
 import felix from "../Img/felix.svg";
 import jorge from "../Img/jorge.svg";
+import cielo from "../Img/cielo.svg";
 import josebe from "../Img/josebe.svg";
 import joset from "../Img/joset.svg";
 import git from "../pic/git.svg";
 import linkedin from "../pic/linkedin.svg";
 import ruby from "../pic/ruby.svg";
 import react from "../pic/react.svg";
+
 export const StyledFatherContainer = styled.div`
   width: 100%;
   height: 833px;
@@ -251,6 +253,14 @@ function Home() {
           <StyledIndividualProfile>
             <img src={jorge} alt="Jorge " />
             <StyledIndividualName>Jorge Solis</StyledIndividualName>
+            <StyledDivLinks>
+              <img src={git} alt="git" />
+              <img src={linkedin} alt="linkedin" />
+            </StyledDivLinks>
+          </StyledIndividualProfile>
+          <StyledIndividualProfile>
+            <img src={cielo} alt=" Cielo " />
+            <StyledIndividualName>Cielo Ricalde</StyledIndividualName>
             <StyledDivLinks>
               <img src={git} alt="git" />
               <img src={linkedin} alt="linkedin" />

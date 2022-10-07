@@ -1,6 +1,5 @@
 import colors from "../../styles/colors";
 import styled from "@emotion/styled";
-import { StyledLogo } from "./NavBar";
 import find from "../pic/find.svg";
 import application from "../pic/application.svg";
 import following from "../pic/following.svg";
@@ -20,25 +19,35 @@ export const StyledSideNavBar = styled.div`
   background-color: ${colors.backgroundDark};
 `;
 
-export const StyledSideNavBarMenu = styled.ul`
+export const StyledSideNavBarMenu = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 556px;
-  gap: 10px;
+  gap: 18px;
   list-style: none;
+  align-items: flex-start;
 `;
 
-export const StyledSideNavBarList = styled.li`
+export const StyledSideNavBarList = styled.div`
   height: 20px;
-  padding: 12px 0px;
+  padding-top: 15px;
+  padding-left: 16px;
+
   font-size: 16px;
   color: ${colors.darkgray};
   display: flex;
-  gap: 8px;
+  gap: 18px;
+  text-align: right;
+  align-items: center;
+`;
+export const StyledPic = styled.img`
+  height: 18px;
+  width: 18px;
+  color: ${colors.darkgray};
+  align-items: center;
 `;
 
 export const StyledSideNavBarFooter = styled.div`
-  padding: 288px 0px 32px 0px;
+  padding-left: 16px;
   height: 236px;
   width: 180px;
   font-size: 10px;
@@ -48,6 +57,7 @@ export const StyledSideNavBarFooter = styled.div`
   align-items: flex-start;
   gap: 12px;
   padding-bottom: 32px;
+  padding-top: 288px;
 `;
 export const StyledFrame49 = styled.div`
   display: flex;
@@ -65,8 +75,7 @@ export const StyledDivCohort = styled.div`
 export const StyledTeam = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  gap: 5px;
   width: 180px;
   height: 135px;
 `;
@@ -86,33 +95,39 @@ export const StyledSourceCode = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 13px;
+`;
+export const StyledSideLogo = styled.div`
+  display: flex;
+  padding-left: 16px;
+  padding-bottom: 32px;
 `;
 
 function SideNavBarForm() {
   return (
     <StyledSideNavBar>
-      <StyledLogo>
-        <img src={require("../Img/logo.png")} />
-      </StyledLogo>
+      <StyledSideLogo>
+        <img src={require("../Img/logo.png")} alt="logo" />
+      </StyledSideLogo>
       <StyledSideNavBarMenu>
         <StyledSideNavBarList>
-          <img src={find} alt="Find" />
+          <StyledPic src={find} alt="FindThat" />
           Find that job
         </StyledSideNavBarList>
         <StyledSideNavBarList>
-          <img src={application} alt="Application" />
+          <StyledPic src={application} alt="Application" />
           Your applications
         </StyledSideNavBarList>
         <StyledSideNavBarList>
-          <img src={following} alt="Following" />
+          <StyledPic src={following} alt="Following" />
           Following
         </StyledSideNavBarList>
         <StyledSideNavBarList>
-          <img src={profile} alt="Profile" />
+          <StyledPic src={profile} alt="Profile" />
           Profile
         </StyledSideNavBarList>
         <StyledSideNavBarList>
-          <img src={logout} alt="Log out" />
+          <StyledPic src={logout} alt="Log out" />
           Log out
         </StyledSideNavBarList>
         <StyledSideNavBarFooter>
@@ -132,6 +147,10 @@ function SideNavBarForm() {
               <StyledDivFooterText>
                 <img src={git} alt="Git" />
                 Fatima Gallardo
+              </StyledDivFooterText>
+              <StyledDivFooterText>
+                <img src={git} alt="Git" />
+                Cielo Farromeque
               </StyledDivFooterText>
               <StyledDivFooterText>
                 <img src={git} alt="Git" />
