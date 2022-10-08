@@ -11,7 +11,7 @@ const WrapperSingUp = styled.div`
   justify-content: center;
   gap: 86px;
   margin-top: 40px;
-  margin-right: 480px;
+  margin-right: auto;
 `;
 
 const SignupFormContainer = styled.div`
@@ -183,7 +183,7 @@ function Signup2() {
             <div>
               <StyledSkipButton>skip this!</StyledSkipButton>
               <Link to="/signup3">
-                <StyledNextButton>Next ></StyledNextButton>
+                <StyledNextButton>Next </StyledNextButton>
               </Link>
             </div>
           </ContainerButton>

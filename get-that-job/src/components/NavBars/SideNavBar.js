@@ -4,11 +4,12 @@ import find from "../pic/find.svg";
 import application from "../pic/application.svg";
 import following from "../pic/following.svg";
 import profile from "../pic/profile.svg";
-import logout from "../pic/logout.svg";
+import logoutImg from "../pic/logout.svg";
 import git from "../pic/git.svg";
 import ruby from "../pic/ruby.svg";
 import react from "../pic/react.svg";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/auth-context";
 
 export const StyledSideNavBar = styled.div`
   height: 900px;
@@ -118,6 +119,9 @@ export const StyledSideLogo = styled.div`
 `;
 
 function SideNavBarForm() {
+
+  const { logout } = useAuth();
+  
   return (
     <StyledSideNavBar>
       <StyledSideLogo>
@@ -148,10 +152,10 @@ function SideNavBarForm() {
             Profile
           </StyledSideNavBarList>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" onClick={logout} style={{ textDecoration: "none" }}>
           <StyledSideNavBarList>
-            <StyledPic src={logout} alt="Log out" />
-            Log out
+            <StyledPic src={logoutImg} alt="Log out" />
+            Log out 
           </StyledSideNavBarList>
         </Link>
         <StyledSideNavBarFooter>

@@ -14,7 +14,7 @@ const WrapperSingUp = styled.div`
   justify-content: center;
   gap: 86px;
   margin-top: 40px;
-  margin-right: 480px;
+  margin-right: auto;
 `;
 
 const SignupFormContainer = styled.div`

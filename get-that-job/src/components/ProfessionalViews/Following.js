@@ -5,7 +5,7 @@ function Following() {
     <>
       <SideNavBarForm />
       <FollowingContainer>
-        <p>Lo prometido es deuda</p>
+        <h1>Followings</h1>
       </FollowingContainer>
     </>
   );

@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 
 const WrapperContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 15px
   justify-content: center;
   font-size: 60px;
 `;
