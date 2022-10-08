@@ -26,7 +26,7 @@ export default async function apiFetch(
     headers,
     body: body ? JSON.stringify(body) : null,
   };
-
+  
   const response = await fetch(BASE_URI + endpoint, config);
 
   let data;
@@ -36,13 +36,13 @@ export default async function apiFetch(
     } catch (error) {
       throw new Error(console.log(response.statusText));
     }
-    throw new Error(data.errors);
+    throw new Error(data);
   }
 
   try {
     data = await response.json();
   } catch (error) {
-    data = response.statusText;
+    data = error;
   }
 
   return data;

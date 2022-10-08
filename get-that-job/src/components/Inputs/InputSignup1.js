@@ -38,11 +38,11 @@ function InputsForm() {
   return (
     <Form>
       <Label htmlFor="email">Email</Label>
-      <StyledInput id="email" type="email" placeholder="some.user@gmail.com" />
+      <StyledInput name="email" type="email" placeholder="some.user@gmail.com" />
       <Label htmlFor="password">Password</Label>
-      <StyledInput id="password" type="password" placeholder="******" />
+      <StyledInput name="password" type="password" placeholder="******" />
       <Label htmlFor="password">Password confirmation</Label>
-      <StyledInput id="password" type="password" placeholder="******" />
+      <StyledInput name="password_confirmation" type="password" placeholder="******" />
     </Form>
   );
 }

@@ -2,7 +2,7 @@ import colors from "../../styles/colors";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { StyledLogInButton } from "../Buttons/Buttons";
-import sessionLogin from "../../service/capstoneServices";
+import { useAuth } from "../../context/auth-context";
 
 const Form = styled.form`
   margin-top: 2rem;
@@ -44,25 +44,25 @@ const StyledInput = styled.input`
 `;
 
 function InputsForm() {
+
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
-  function login(event) {
-    event.preventDefault();
-    sessionLogin(formData)
-      .then((user) => console.log(user))
-      .catch((error) => console.log(error));
-  }
 
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   }
 
+  function handleSubmit(e){
+    e.preventDefault();
+    login(formData)
+  }
+
   return (
-    <Form onSubmit={login}>
+    <Form onSubmit={handleSubmit}>
       <Label htmlFor="email">Email</Label>
       <StyledInput
         onChange={handleChange}

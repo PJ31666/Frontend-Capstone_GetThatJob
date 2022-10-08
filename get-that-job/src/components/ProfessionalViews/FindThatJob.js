@@ -10,13 +10,15 @@ import WebWorksCardForm from "../Cards/WebWorksCardForm";
 import YogaBabyCardForm from "../Cards/YogaBabyCardForm";
 import CroftsCardForm from "../Cards/CroftsCardForm";
 import AutoSpeedCardForm from "../Cards/AutoSpeedCardForm";
-/*
+import { useEffect, useState } from "react";
+import { getJobs } from "../../service/jobServices";
 
 
 
 
 
-*/
+
+
 
 export const StyledFindThatContainer = styled.div`
   width: 100%;
@@ -136,6 +138,17 @@ export const StyledRowCardContainer = styled.div`
 `;
 
 function FindThatJob() {
+
+
+  const [allJobs, SetAllJobs] = useState([]);
+
+  useEffect(()=>{
+    getJobs()
+    .then((response)=>SetAllJobs(response))
+    .catch((error)=>console.log(error));
+  },[])
+
+
   return (
     <StyledFindThatContainer>
       <SideNavBarForm />
@@ -172,36 +185,14 @@ function FindThatJob() {
           </StyledThirdSelectDiv>
         </StyledSelectDiv>
         <StyledResultsContainer>
-          <h2>12 jobs for you</h2>
+          <h2>{allJobs.length} jobs for you</h2>
           <StyledRowCardContainer>
             <BabySwimCardForm />
-            <FastBananaCardForm />
-            <SpaceCubeCardForm />
           </StyledRowCardContainer>
-          <StyledRowCardContainer>
-            <DanceStudioCardForm />
-            <GreenCardForm />
-            <WebWorksCardForm />
-          </StyledRowCardContainer>
-          <StyledRowCardContainer>
-            <YogaBabyCardForm />
-            <CroftsCardForm />
-            <AutoSpeedCardForm />
-          </StyledRowCardContainer>
-          <StyledRowCardContainer>
-            <GreenCardForm />
-            <WebWorksCardForm />
-            <FastBananaCardForm />
-          </StyledRowCardContainer>
+          
         </StyledResultsContainer>
       </StyledSonContainer>
     </StyledFindThatContainer>
   );
 }
 export default FindThatJob;
-
-/*
-          
-          
-          
-          */
