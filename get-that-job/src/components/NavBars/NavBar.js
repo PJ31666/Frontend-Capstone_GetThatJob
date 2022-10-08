@@ -35,6 +35,7 @@ export const StyledButton = styled.button`
   gap: 9px;
   border-color: ${colors.pink};
   background-color: ${colors.white};
+  cursor: pointer;
 `;
 
 function NavBarForm() {
@@ -42,7 +43,7 @@ function NavBarForm() {
     <StyledNavBar>
       <Link to="/">
         <StyledLogo>
-          <img src={require("../Img/logo.png")} />
+          <img src={require("../Img/logo.png")} alt="WebLogo" />
         </StyledLogo>
       </Link>
 
@@ -50,14 +51,16 @@ function NavBarForm() {
         <Link to="/signup1">
           <StyledButton>
             <img src={sign} alt="Sign Logo" />
-            SIGN IN
+            SIGN UP
           </StyledButton>
         </Link>
 
-        <StyledButton>
-          <img src={log} alt="Sign Logo" />
-          LOGIN
-        </StyledButton>
+        <Link to="/login">
+          <StyledButton>
+            <img src={log} alt="Sign Logo" />
+            LOGIN
+          </StyledButton>
+        </Link>
       </StyledMenu>
     </StyledNavBar>
   );
