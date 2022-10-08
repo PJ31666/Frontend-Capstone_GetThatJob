@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
 import InputSignup3 from "../Inputs/InputSignup3";
-import women from "../Images/women.svg";
+import women from "../Img/women.svg";
 import {
   StyledChooseFileButton,
   StyledNextButton,
@@ -190,7 +190,9 @@ function Signup3() {
               <p>UPLOAD/UPDATE YOUR CV</p>
             </div>
             <div>
-              <StyledChooseFileButton>Choose a file</StyledChooseFileButton>
+              <StyledChooseFileButton type="file">
+                Choose a file
+              </StyledChooseFileButton>
               <p>No file chosen</p>
             </div>
             <div>

@@ -4,6 +4,7 @@ import SignupContainer from "../../styles/SignupContainer";
 import InputSignup1 from "../Inputs/InputSignup1";
 import women from "../Img/women.svg";
 import { StyledNextButton } from "../Buttons/Buttons";
+import { Link } from "react-router-dom";
 
 const WrapperSingUp = styled.div`
   display: flex;
@@ -158,7 +159,9 @@ function Signup1() {
 
           <InputSignup1 />
           <ContainerButton>
-            <StyledNextButton>Next</StyledNextButton>
+            <Link to="/signup2">
+              <StyledNextButton>Next</StyledNextButton>
+            </Link>
           </ContainerButton>
         </SignupFormContainer>
         <ContainerPhoto>
