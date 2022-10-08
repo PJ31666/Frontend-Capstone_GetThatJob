@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 import manufactoring from "../pic/manufactoring.svg";
 import calendar from "../pic/calendar.svg";
 import salary from "../pic/salary.svg";
-import { StyledFollowButton } from "./buttons";
+import { StyledFollowButton } from "../Buttons/Buttons";
 import following from "../pic/following.svg";
-import { StyledSeeMoreButton } from "./buttons";
+import { StyledSeeMoreButton } from "../Buttons/Buttons";
 
 export const StyledCard = styled.div`
   height: 170px;
@@ -102,12 +102,12 @@ export const StyledCardFooter = styled.div`
   padding: 16px 16px;
 `;
 
-function CardForm() {
+function CroftsCardForm() {
   return (
     <StyledCard>
       <StyledContainer>
         <StyledLogoTitle>
-          <img src={require("../img/examplecard.png")} />
+          <img src={require("../CompanyLogos/crofts.png")} alt="crofts" />
           <StyledCompanyInformationContainer>
             <StyledCategoryDiv>
               <StyledSvg src={manufactoring} alt="Manufact" />
@@ -141,4 +141,4 @@ function CardForm() {
   );
 }
 
-export default CardForm;
+export default CroftsCardForm;
