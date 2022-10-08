@@ -14,6 +14,7 @@ export const StyledCreateAccountButton = styled.button`
   color: ${colors.white};
   letter-spacing: 1.25px;
   border: none;
+  cursor: pointer;
 `;
 
 export const StyledLogInButton = styled.button`

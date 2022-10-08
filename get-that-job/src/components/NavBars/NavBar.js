@@ -2,6 +2,7 @@ import colors from "../../styles/colors";
 import styled from "@emotion/styled";
 import sign from "../pic/sign.svg";
 import log from "../pic/log.svg";
+import { Link } from "react-router-dom";
 
 export const StyledNavBar = styled.div`
   display: flex;
@@ -34,23 +35,32 @@ export const StyledButton = styled.button`
   gap: 9px;
   border-color: ${colors.pink};
   background-color: ${colors.white};
+  cursor: pointer;
 `;
 
 function NavBarForm() {
   return (
     <StyledNavBar>
-      <StyledLogo>
-        <img src={require("../Img/logo.png")} alt="ssas" />
-      </StyledLogo>
+      <Link to="/">
+        <StyledLogo>
+          <img src={require("../Img/logo.png")} alt="WebLogo" />
+        </StyledLogo>
+      </Link>
+
       <StyledMenu>
-        <StyledButton>
-          <img src={sign} alt="Sign Logo" />
-          SIGN IN
-        </StyledButton>
-        <StyledButton>
-          <img src={log} alt="Sign Logo" />
-          LOGIN
-        </StyledButton>
+        <Link to="/signup1">
+          <StyledButton>
+            <img src={sign} alt="Sign Logo" />
+            SIGN UP
+          </StyledButton>
+        </Link>
+
+        <Link to="/login">
+          <StyledButton>
+            <img src={log} alt="Sign Logo" />
+            LOGIN
+          </StyledButton>
+        </Link>
       </StyledMenu>
     </StyledNavBar>
   );

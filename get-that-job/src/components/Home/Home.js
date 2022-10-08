@@ -14,6 +14,7 @@ import git from "../pic/git.svg";
 import linkedin from "../pic/linkedin.svg";
 import ruby from "../pic/ruby.svg";
 import react from "../pic/react.svg";
+import { Link } from "react-router-dom";
 
 export const StyledFatherContainer = styled.div`
   width: 100%;
@@ -197,9 +198,11 @@ function Home() {
           take care of it.
         </StyledP>
         <StyledButtonContainer>
-          <StyledCreateAccountButton>
-            Create Account Now
-          </StyledCreateAccountButton>
+          <Link to="/signup1">
+            <StyledCreateAccountButton>
+              Create Account Now
+            </StyledCreateAccountButton>
+          </Link>
         </StyledButtonContainer>
         <img src={group} alt="grupo" />
       </StyledSonContainer>
@@ -220,7 +223,9 @@ function Home() {
           </StyledDescriptionContainer>
         </StyledDarkPinkContainer>
         <StyledImageContainer>
-          <img src={searchLogo} alt="Search Logo" />
+          <Link to="/FindThatJob">
+            <img src={searchLogo} alt="Search Logo" />
+          </Link>
         </StyledImageContainer>
       </StyledSecondSonContainer>
       <StyledThirdSonContainer>
