@@ -3,7 +3,7 @@ import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
 import InputSignup1 from "../Inputs/InputSignup1";
 import women from "../Images/women.svg";
-import { StyledLogInButton, StyledNextButton } from "../Buttons/Buttons";
+import { StyledNextButton } from "../Buttons/Buttons";
 
 const WrapperSingUp = styled.div`
   display: flex;
