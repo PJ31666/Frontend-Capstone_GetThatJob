@@ -2,6 +2,7 @@ import colors from "../../styles/colors";
 import styled from "@emotion/styled";
 import sign from "../pic/sign.svg";
 import log from "../pic/log.svg";
+import { Link } from "react-router-dom";
 
 export const StyledNavBar = styled.div`
   display: flex;
@@ -39,14 +40,20 @@ export const StyledButton = styled.button`
 function NavBarForm() {
   return (
     <StyledNavBar>
-      <StyledLogo>
-        <img src={require("../Img/logo.png")} />
-      </StyledLogo>
+      <Link to="/">
+        <StyledLogo>
+          <img src={require("../Img/logo.png")} />
+        </StyledLogo>
+      </Link>
+
       <StyledMenu>
-        <StyledButton>
-          <img src={sign} alt="Sign Logo" />
-          SIGN IN
-        </StyledButton>
+        <Link to="/signup1">
+          <StyledButton>
+            <img src={sign} alt="Sign Logo" />
+            SIGN IN
+          </StyledButton>
+        </Link>
+
         <StyledButton>
           <img src={log} alt="Sign Logo" />
           LOGIN

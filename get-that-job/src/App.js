@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
@@ -6,15 +5,7 @@ import NavBar from "./components/NavBars/NavBar";
 import Signup1 from "./components/SignupProf/Signup1";
 import SignupRec2 from "./components/SignupRec/SignupRec2";
 import Login from "./components/Login/Login";
-
-const WrapperLogin = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 86px;
-  margin-top: 132px;
-  margin-left: 318px;
-  margin-right: 120px;
-`;
+import SignupRec1 from "./components/SignupRec/SignupRec1";
 
 function App() {
   return (
@@ -24,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup1" element={<Signup1 />} />
+        <Route path="/signupRec1" element={<SignupRec1 />} />
         <Route path="/signupRec2" element={<SignupRec2 />} />
       </Routes>
     </>
