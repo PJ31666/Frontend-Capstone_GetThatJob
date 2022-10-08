@@ -8,6 +8,7 @@ import logout from "../pic/logout.svg";
 import git from "../pic/git.svg";
 import ruby from "../pic/ruby.svg";
 import react from "../pic/react.svg";
+import { Link } from "react-router-dom";
 
 export const StyledSideNavBar = styled.div`
   height: 900px;
@@ -31,13 +32,26 @@ export const StyledSideNavBarList = styled.div`
   height: 20px;
   padding-top: 15px;
   padding-left: 16px;
-
   font-size: 16px;
   color: ${colors.darkgray};
   display: flex;
   gap: 18px;
   text-align: right;
   align-items: center;
+  text-decoration: none;
+`;
+export const StyledCurrentSideNavBarList = styled.div`
+  height: 48px;
+  width: 240px;
+  padding-left: 16px;
+  font-size: 16px;
+  color: ${colors.darkgray};
+  background-color: ${colors.white};
+  display: flex;
+  gap: 18px;
+  text-align: right;
+  align-items: center;
+  text-decoration: none;
 `;
 export const StyledPic = styled.img`
   height: 18px;
@@ -110,29 +124,39 @@ function SideNavBarForm() {
         <img src={require("../Img/logo.png")} alt="logo" />
       </StyledSideLogo>
       <StyledSideNavBarMenu>
-        <StyledSideNavBarList>
-          <StyledPic src={find} alt="FindThat" />
-          Find that job
-        </StyledSideNavBarList>
-        <StyledSideNavBarList>
-          <StyledPic src={application} alt="Application" />
-          Your applications
-        </StyledSideNavBarList>
-        <StyledSideNavBarList>
-          <StyledPic src={following} alt="Following" />
-          Following
-        </StyledSideNavBarList>
-        <StyledSideNavBarList>
-          <StyledPic src={profile} alt="Profile" />
-          Profile
-        </StyledSideNavBarList>
-        <StyledSideNavBarList>
-          <StyledPic src={logout} alt="Log out" />
-          Log out
-        </StyledSideNavBarList>
+        <Link to="/FindThatJob" style={{ textDecoration: "none" }}>
+          <StyledCurrentSideNavBarList>
+            <StyledPic src={find} alt="FindThat" />
+            Find that job
+          </StyledCurrentSideNavBarList>
+        </Link>
+        <Link to="/YourApplication" style={{ textDecoration: "none" }}>
+          <StyledSideNavBarList>
+            <StyledPic src={application} alt="Application" />
+            Your applications
+          </StyledSideNavBarList>
+        </Link>
+        <Link to="/Following" style={{ textDecoration: "none" }}>
+          <StyledSideNavBarList>
+            <StyledPic src={following} alt="Following" />
+            Following
+          </StyledSideNavBarList>
+        </Link>
+        <Link to="/MyProfile" style={{ textDecoration: "none" }}>
+          <StyledSideNavBarList>
+            <StyledPic src={profile} alt="Profile" />
+            Profile
+          </StyledSideNavBarList>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <StyledSideNavBarList>
+            <StyledPic src={logout} alt="Log out" />
+            Log out
+          </StyledSideNavBarList>
+        </Link>
         <StyledSideNavBarFooter>
           <StyledFrame49>
-            <div>© 202X - Get That Job</div>
+            <div>© 2022 - Get That Job</div>
             <StyledDivCohort>Codeable - Cohort 7 Final Project</StyledDivCohort>
             <StyledTeam>
               Build with ❤ by:

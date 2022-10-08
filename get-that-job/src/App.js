@@ -9,7 +9,11 @@ import SignupRec1 from "./components/SignupRec/SignupRec1";
 import SignupRec2 from "./components/SignupRec/SignupRec2";
 import Login from "./components/Login/Login";
 import FindThatJob from "./components/ProfessionalViews/FindThatJob";
-import SideNavBarForm from "./components/NavBars/SideNavBar";
+
+import MyProfile from "./components/ProfessionalViews/MyProfile";
+import Following from "./components/ProfessionalViews/Following";
+import YourApplication from "./components/ProfessionalViews/YourApplication";
+
 function App() {
   return (
     <>
@@ -23,7 +27,9 @@ function App() {
         <Route path="/signupRec1" element={<SignupRec1 />} />
         <Route path="/signupRec2" element={<SignupRec2 />} />
         <Route path="/FindThatJob" element={<FindThatJob />} />
-        <Route path="/SideNavBar" element={<SideNavBarForm />} />
+        <Route path="/YourApplication" element={<YourApplication />} />
+        <Route path="/Following" element={<Following />} />
+        <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
     </>
   );
