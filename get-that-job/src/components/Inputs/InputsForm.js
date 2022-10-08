@@ -38,9 +38,9 @@ function InputsForm() {
   return (
     <Form>
       <Label htmlFor="email">Email</Label>
-      <StyledInput id="email" placeholder="some.user@gmail.com" />
+      <StyledInput id="email" type="email" placeholder="some.user@gmail.com" />
       <Label htmlFor="password">Password</Label>
-      <StyledInput id="password" placeholder="******" />
+      <StyledInput id="password" type="password" placeholder="******" />
     </Form>
   );
 }

@@ -35,7 +35,7 @@ export const StyledLogInButton = styled.button`
 
 export const StyledNextButton = styled.button`
   display: flex;
-  height: 40px;
+  height: 42px;
   width: 106px;
   left: 127px;
   top: 204px;
@@ -51,6 +51,8 @@ export const StyledNextButton = styled.button`
   color: ${colors.white};
   border: none;
   cursor: pointer;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 `;
 export const StyledFinishButton = styled.button`
   display: flex;
@@ -77,10 +79,16 @@ export const StyledSkipButton = styled.button`
   padding: 8px 16px 8px 16px;
   background-color: ${colors.background};
   border-color: ${colors.pink};
-  color: ${colors.gray};
-  font-size: 13px;
+
+  font-size: 14px;
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 500;
-  letter-spacing: 1.25px;
+  font-weight: 500;
+  color: ${colors.black};
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 `;
 
 export const StyledChooseFileButton = styled.button`
@@ -91,11 +99,14 @@ export const StyledChooseFileButton = styled.button`
   padding: 8px;
   background-color: ${colors.pink};
   gap: 8px;
-  font-size: 14px;
-  align-items: center;
-  gap: 10px;
-  color: ${colors.white};
   font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
 `;
 
 export const StyledPreviousButton = styled.button`

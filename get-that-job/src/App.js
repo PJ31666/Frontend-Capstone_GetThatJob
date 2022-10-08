@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import SignupRec1 from "./components/SignupRec/SignupRec1";
 import FindThatJob from "./components/ProfessionalViews/FindThatJob";
 import SideNavBarForm from "./components/NavBars/SideNavBar";
+import Signup3 from "./components/SignupProf/Signup3";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup1" element={<Signup1 />} />
+        <Route path="/signup3" element={<Signup3 />} />
         <Route path="/signupRec1" element={<SignupRec1 />} />
         <Route path="/signupRec2" element={<SignupRec2 />} />
         <Route path="/FindThatJob" element={<FindThatJob />} />

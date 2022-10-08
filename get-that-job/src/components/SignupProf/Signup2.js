@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
-import InputSignup1 from "../Inputs/InputSignup1";
+import InputSignup2 from "../Inputs/InputSignup2";
 import women from "../Images/women.svg";
-import { StyledLogInButton, StyledNextButton } from "../Buttons/Buttons";
+import { StyledNextButton, StyledSkipButton } from "../Buttons/Buttons";
 
 const WrapperSingUp = styled.div`
   display: flex;
@@ -87,9 +87,24 @@ const DivContainer = styled.div`
   }
 `;
 
+const InfoSteps = styled.div`
+  margin-top: 1.5rem;
+  display: flex;
+  width: 380px;
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #616161;
+`;
+
 const ContainerButton = styled.div`
   display: flex;
-  align-self: center;
+  align-items: center;
   margin-top: 2rem;
 `;
 
@@ -121,6 +136,7 @@ function Signup2() {
               <h3>RECRUITER</h3>
             </div>
           </div>
+
           <ContainerSteps>
             <DivContainer>
               <div>
@@ -155,10 +171,18 @@ function Signup2() {
               </div>
             </DivContainer>
           </ContainerSteps>
-
-          <InputSignup1 />
+          <InfoSteps>
+            <span>
+              You can complete this information later but we
+              <br /> reccomend you to do it now
+            </span>
+          </InfoSteps>
+          <InputSignup2 />
           <ContainerButton>
-            <StyledNextButton>Next </StyledNextButton>
+            <div>
+              <StyledSkipButton>skip this!</StyledSkipButton>
+              <StyledNextButton>Next ></StyledNextButton>
+            </div>
           </ContainerButton>
         </SignupFormContainer>
         <ContainerPhoto>
