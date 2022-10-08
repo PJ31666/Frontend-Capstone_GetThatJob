@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
 import InputSignup3 from "../Inputs/InputSignup3";
-import women from "../Images/women.svg";
+import women from "../Img/women.svg";
 import {
   StyledChooseFileButton,
   StyledNextButton,
@@ -201,13 +201,13 @@ function Signup3() {
             <div>
               <StyledNextButton>previous</StyledNextButton>
               <StyledSkipButton>skip this!</StyledSkipButton>
-              <StyledNextButton>FINISH ></StyledNextButton>
+              <StyledNextButton>FINISH</StyledNextButton>
             </div>
           </ContainerButton>
         </SignupFormContainer>
         <ContainerPhoto>
           <div>
-            <img src={women} alt="" />
+            <img src={women} alt="women" />
           </div>
         </ContainerPhoto>
       </SignupContainer>

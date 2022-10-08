@@ -3,7 +3,6 @@ import colors from "../../styles/colors";
 import LoginContainer from "../../styles/LoginContainer";
 import InputsForm from "../Inputs/InputsForm";
 import MenPhoto from "../Img/MenPhoto";
-import { StyledLogInButton } from "../Buttons/Buttons";
 
 const WrapperLogin = styled.div`
   display: flex;
@@ -55,13 +54,6 @@ const LoginFormContainer = styled.div`
   }
 `;
 
-const ContainerButton = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-self: flex-end;
-`;
-
 function Login() {
   return (
     <WrapperLogin>
@@ -77,9 +69,6 @@ function Login() {
           </div>
 
           <InputsForm />
-          <ContainerButton>
-            <StyledLogInButton>Login</StyledLogInButton>
-          </ContainerButton>
         </LoginFormContainer>
         <MenPhoto />
       </LoginContainer>
