@@ -190,7 +190,9 @@ function Signup3() {
               <p>UPLOAD/UPDATE YOUR CV</p>
             </div>
             <div>
-              <StyledChooseFileButton>Choose a file</StyledChooseFileButton>
+              <StyledChooseFileButton type="file">
+                Choose a file
+              </StyledChooseFileButton>
               <p>No file chosen</p>
             </div>
             <div>

@@ -2,8 +2,9 @@ import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SignupContainer from "../../styles/SignupContainer";
 import InputSignup2 from "../Inputs/InputSignup2";
-import women from "../Images/women.svg";
+import women from "../Img/women.svg";
 import { StyledNextButton, StyledSkipButton } from "../Buttons/Buttons";
+import { Link } from "react-router-dom";
 
 const WrapperSingUp = styled.div`
   display: flex;
@@ -174,14 +175,16 @@ function Signup2() {
           <InfoSteps>
             <span>
               You can complete this information later but we
-              <br /> reccomend you to do it now
+              <br /> recomend you to do it now
             </span>
           </InfoSteps>
           <InputSignup2 />
           <ContainerButton>
             <div>
               <StyledSkipButton>skip this!</StyledSkipButton>
-              <StyledNextButton>Next ></StyledNextButton>
+              <Link to="/signup3">
+                <StyledNextButton>Next ></StyledNextButton>
+              </Link>
             </div>
           </ContainerButton>
         </SignupFormContainer>
