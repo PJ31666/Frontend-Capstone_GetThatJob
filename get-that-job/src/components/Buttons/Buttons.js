@@ -94,17 +94,16 @@ export const StyledSkipButton = styled.button`
 export const StyledChooseFileButton = styled.button`
   display: flex;
   height: 36px;
-  width: 134px;
+  width: fit-content;
   border-radius: 8px;
   padding: 8px;
   background-color: ${colors.pink};
   gap: 8px;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   cursor: pointer;
-  text-transform: uppercase;
   color: #ffffff;
   border: none;
 `;
@@ -136,15 +135,18 @@ export const StyledRadioButton = styled.button`
   height: 20px;
   width: 20px;
   border-radius: 50px;
+  border-color: ${colors.pink};
+  position: relative;
 `;
 
-export const StyledCurrentRadioButton = styled.div`
+export const StyledCurrentRadioButton = styled.button`
   height: 12px;
   width: 12px;
   left: 4px;
   top: 4px;
   border-radius: 50px;
   background-color: ${colors.pink};
+  position: absolute;
 `;
 
 export const StyledSeeMoreButton = styled.button`
@@ -255,6 +257,8 @@ export const StyledSaveButton = styled.button`
   padding: 8px 16px 8px 16px;
   align-items: center;
   background-color: ${colors.pink};
+  border: none;
+  color: ${colors.white};
 `;
 export const StyledAppliedButton = styled.button`
   height: 40px;
