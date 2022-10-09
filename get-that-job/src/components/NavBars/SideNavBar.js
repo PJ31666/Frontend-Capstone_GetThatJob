@@ -84,7 +84,6 @@ export const StyledFrame49 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-
   width: 180px;
   height: 290px;
 `;
