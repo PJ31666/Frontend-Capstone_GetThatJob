@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./components/NavBars/NavBar";
+import { UnaunthenticatedApp } from "./UnauthenticatedApp";
+import { AuthenticateApp } from "./AuthenticatedApp";
+import { useAuth } from "./context/auth-context";
+import Home from "./components/Home/Home";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import SideNavBarRecru from "./components/NavBars/SideNavBarRecru";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/");
+  }, [user]);
+  
+   {/*<SideNavBarRecru />*/}
 
-export default App;
+  return user ? <AuthenticateApp /> : <UnaunthenticatedApp />;
