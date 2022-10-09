@@ -8,12 +8,12 @@ import logoutImg from "../pic/logout.svg";
 import git from "../pic/git.svg";
 import ruby from "../pic/ruby.svg";
 import react from "../pic/react.svg";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
-import FindThatJob from "../ProfessionalViews/FindThatJob";
-import YourApplication from "../ProfessionalViews/YourApplication";
-import Following from "../ProfessionalViews/Following";
-import MyProfile from "../ProfessionalViews/MyProfile";
+// import FindThatJob from "../ProfessionalViews/FindThatJob";
+// import YourApplication from "../ProfessionalViews/YourApplication";
+// import Following from "../ProfessionalViews/Following";
+// import MyProfile from "../ProfessionalViews/MyProfile";
 import Home from "../Home/Home";
 import NavBarForm from "./NavBar";
 
