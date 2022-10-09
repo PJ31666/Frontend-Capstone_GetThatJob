@@ -8,8 +8,14 @@ import logoutImg from "../pic/logout.svg";
 import git from "../pic/git.svg";
 import ruby from "../pic/ruby.svg";
 import react from "../pic/react.svg";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
+import FindThatJob from "../ProfessionalViews/FindThatJob";
+import YourApplication from "../ProfessionalViews/YourApplication";
+import Following from "../ProfessionalViews/Following";
+import MyProfile from "../ProfessionalViews/MyProfile";
+import Home from "../Home/Home";
+import NavBarForm from "./NavBar";
 
 export const StyledSideNavBar = styled.div`
   height: 900px;
@@ -118,16 +124,16 @@ export const StyledSideLogo = styled.div`
 `;
 
 function SideNavBarForm() {
-
   const { logout } = useAuth();
-  
+
   return (
     <StyledSideNavBar>
       <StyledSideLogo>
         <img src={require("../Img/logo.png")} alt="logo" />
       </StyledSideLogo>
       <StyledSideNavBarMenu>
-        <Link to="/FindThatJob" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          {/*Path to FindThatJob*/}
           <StyledCurrentSideNavBarList>
             <StyledPic src={find} alt="FindThat" />
             Find that job
@@ -154,9 +160,22 @@ function SideNavBarForm() {
         <Link to="/" onClick={logout} style={{ textDecoration: "none" }}>
           <StyledSideNavBarList>
             <StyledPic src={logoutImg} alt="Log out" />
-            Log out 
+            Log out
           </StyledSideNavBarList>
         </Link>
+
+        {/* 
+  <div>
+    <NavBarForm/>
+    <Routes>
+    <Route index element={<Home />} />
+        <Route path="/FindThatJob" element={<FindThatJob />} />
+        <Route path="/YourApplication" element={<YourApplication />} />
+        <Route path="/Following" element={<Following />} />
+        <Route path="/MyProfile" element={<MyProfile />} />
+    </Routes>
+  </div> */}
+
         <StyledSideNavBarFooter>
           <StyledFrame49>
             <div>© 2022 - Get That Job</div>

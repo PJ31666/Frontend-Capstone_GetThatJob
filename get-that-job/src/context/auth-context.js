@@ -4,8 +4,6 @@ import { tokenKey } from "../config";
 import * as auth from "../service/sessionServices";
 import { getUser } from "../service/userServices";
 
-
-
 const AuthContext = createContext();
 
 function AuthProvider({ children }) {
@@ -18,7 +16,8 @@ function AuthProvider({ children }) {
   }, []);
 
   function login(credentials) {
-    auth.sessionLogin(credentials)
+    auth
+      .sessionLogin(credentials)
       .then((u) => setUser(u))
       .catch((error) => console.log(error));
   }
@@ -27,6 +26,7 @@ function AuthProvider({ children }) {
     auth.sessionLogout().then(() => {
       sessionStorage.removeItem(tokenKey);
       sessionStorage.removeItem("id");
+      sessionStorage.removeItem("rol");
       setUser(null);
     });
   }
@@ -36,7 +36,7 @@ function AuthProvider({ children }) {
   //     .then((u) => setUser(u))
   //     .catch((error) => console.log(error));
   // }
-  
+
   return (
     <AuthContext.Provider
       value={{
@@ -51,8 +51,8 @@ function AuthProvider({ children }) {
   );
 }
 
-function useAuth(){
+function useAuth() {
   return useContext(AuthContext);
 }
 
-export { AuthProvider, useAuth};
+export { AuthProvider, useAuth };
