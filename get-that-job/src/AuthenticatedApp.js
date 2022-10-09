@@ -9,6 +9,7 @@ export function AuthenticateApp() {
   function Recruiter() {
     return <h1>Recruiter</h1>;
   }
+
   if (sessionStorage.getItem("rol") === "professional") {
     return (
       <div>
