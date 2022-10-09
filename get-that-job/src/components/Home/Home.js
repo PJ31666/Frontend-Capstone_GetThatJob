@@ -211,13 +211,13 @@ function Home() {
           <StyledDescriptionContainer>
             <StyledH1Description>Find your next job</StyledH1Description>
             <StyledPDescription>
-              Our Machine learning algorithm is so good that it’s even illegal
-              in some countries. Join us to use our barelly legal algorithm that
+              Our Machine learning algorithm is so good that it's even illegal
+              in some countries. Join us to use our barely legal algorithm that
               is actually a group of interns that work on our basement.<br></br>
               <br></br>
               We have a job for you, no matter your background or previous
               experience. Is sending random memes through chat your only skill?
-              That’s ok, we got you, our Rock Star Meme Curator role is here for
+              That's ok, we got you, our Rock Star Meme Curator role is here for
               you.
             </StyledPDescription>
           </StyledDescriptionContainer>
