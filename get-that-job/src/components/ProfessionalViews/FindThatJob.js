@@ -1,22 +1,10 @@
 import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import SideNavBarForm from "../NavBars/SideNavBar";
-import BabySwimCardForm from "../Cards/BabySwimCard";
-import FastBananaCardForm from "../Cards/FastBananaCard";
-import SpaceCubeCardForm from "../Cards/SpaceCubeCardForm";
-import DanceStudioCardForm from "../Cards/DanceStudioCardForm";
-import GreenCardForm from "../Cards/GreenCardForm";
-import WebWorksCardForm from "../Cards/WebWorksCardForm";
-import YogaBabyCardForm from "../Cards/YogaBabyCardForm";
+// import BabySwimCardForm from "../Cards/BabySwimCard";
+import { useEffect, useState } from "react";
+import { getJobs } from "../../service/jobServices";
 import CroftsCardForm from "../Cards/CroftsCardForm";
-import AutoSpeedCardForm from "../Cards/AutoSpeedCardForm";
-/*
-
-
-
-
-
-*/
 
 export const StyledFindThatContainer = styled.div`
   width: 100%;
@@ -136,6 +124,15 @@ export const StyledRowCardContainer = styled.div`
 `;
 
 function FindThatJob() {
+  const [allJobs, SetAllJobs] = useState([]);
+
+  console.log(allJobs);
+  useEffect(() => {
+    getJobs()
+      .then((response) => SetAllJobs(response))
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <StyledFindThatContainer>
       <SideNavBarForm />
@@ -172,26 +169,17 @@ function FindThatJob() {
           </StyledThirdSelectDiv>
         </StyledSelectDiv>
         <StyledResultsContainer>
-          <h2>12 jobs for you</h2>
+          <h2>{allJobs.length} jobs for you</h2>
           <StyledRowCardContainer>
-            <BabySwimCardForm />
-            <FastBananaCardForm />
-            <SpaceCubeCardForm />
-          </StyledRowCardContainer>
-          <StyledRowCardContainer>
-            <DanceStudioCardForm />
-            <GreenCardForm />
-            <WebWorksCardForm />
-          </StyledRowCardContainer>
-          <StyledRowCardContainer>
-            <YogaBabyCardForm />
-            <CroftsCardForm />
-            <AutoSpeedCardForm />
-          </StyledRowCardContainer>
-          <StyledRowCardContainer>
-            <GreenCardForm />
-            <WebWorksCardForm />
-            <FastBananaCardForm />
+            {allJobs.map((job) => {
+              // console.log(job);
+              return <CroftsCardForm props={job} />;
+              // return (
+              //   <div key={job.id}>
+              //     <h2>{job.job_title}</h2>
+              //   </div>
+              // );
+            })}
           </StyledRowCardContainer>
         </StyledResultsContainer>
       </StyledSonContainer>
@@ -199,9 +187,3 @@ function FindThatJob() {
   );
 }
 export default FindThatJob;
-
-/*
-          
-          
-          
-          */

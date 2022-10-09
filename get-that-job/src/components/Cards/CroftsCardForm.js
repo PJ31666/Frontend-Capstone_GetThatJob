@@ -102,29 +102,29 @@ export const StyledCardFooter = styled.div`
   padding: 16px 16px;
 `;
 
-function CroftsCardForm() {
+export function CroftsCardForm(props) {
   return (
-    <StyledCard>
+    <StyledCard key={props.id}>
+      {console.log(props.props)}
       <StyledContainer>
         <StyledLogoTitle>
           <img src={require("../CompanyLogos/crofts.png")} alt="crofts" />
           <StyledCompanyInformationContainer>
             <StyledCategoryDiv>
               <StyledSvg src={manufactoring} alt="Manufact" />
-              Manufactoring
+              Category
             </StyledCategoryDiv>
             <StyledTitleDiv>
-              The job Title
-              <StyledCompanyNameDiv>The Company Name</StyledCompanyNameDiv>
+              <StyledCompanyNameDiv>{props.job_title}</StyledCompanyNameDiv>
             </StyledTitleDiv>
             <StyledTypeSalaryDiv>
               <StyledTypeDiv>
                 <img src={calendar} alt="Type Logo" />
-                Full Time
+                {props.types}
               </StyledTypeDiv>
               <StyledSalaryDiv>
                 <img src={salary} alt="Salary Logo" />
-                2.0k - 2.5k
+                {props.min_salary} - {props.max_salary}
               </StyledSalaryDiv>
             </StyledTypeSalaryDiv>
           </StyledCompanyInformationContainer>
@@ -142,3 +142,29 @@ function CroftsCardForm() {
 }
 
 export default CroftsCardForm;
+
+// return (
+//   <StyledCardContainer>
+//     <ContainerInformation>
+//       <ContentImage>{image}</ContentImage>
+//       <ContainerDescription>
+//         <div>
+//           <StyledCategory>{category}</StyledCategory>
+//           <StyledJobTitle>{jobTitle}</StyledJobTitle>
+//           <StyledCompanyName>{companyName}</StyledCompanyName>
+//         </div>
+//         <div>
+//           <StyledTypeJob>{typeJob}</StyledTypeJob>
+//           <StyledSalary>
+//             {salaryMin}k - {salaryMax}k
+//           </StyledSalary>
+//         </div>
+//       </ContainerDescription>
+//     </ContainerInformation>
+//     <div>
+//       <StyledFollowButton />
+//       <StyledCardContainer />
+//     </div>
+//   </StyledCardContainer>
+// );
+// }
